@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg">
+
+    <!-- MUConnect Logo -->
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:src="@mipmap/ic_logo_foreground"
+        android:contentDescription="@string/app_name" />
+
+    <!-- USERNAME -->
+    <LinearLayout
+        android:id="@+id/userLayout"
+        android:orientation="horizontal"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/logoImage"
+        android:layout_marginTop="40dp">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_person"
+            app:tint="#FFD700"
+            android:layout_marginEnd="12dp"/>
+
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:minHeight="48dp"
+            android:layout_weight="1"
+            android:hint="GR No / Enrollment / Emp Code"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#CCCCCC"
+            android:background="@null"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="310dp"
+        android:layout_height="1dp"
+        android:layout_below="@id/userLayout"
+        android:layout_centerHorizontal="true"
+        android:background="#FFFFFF"/>
+
+    <!-- PASSWORD -->
+    <LinearLayout
+        android:id="@+id/passLayout"
+        android:orientation="horizontal"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/userLayout"
+        android:layout_marginTop="40dp">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_lock"
+            app:tint="#FFD700"
+            android:layout_marginEnd="12dp"/>
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:minHeight="48dp"
+            android:layout_weight="1"
+            android:hint="DOB (ddmmyyyy)"
+            android:inputType="number"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#CCCCCC"
+            android:background="@null"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="310dp"
+        android:layout_height="1dp"
+        android:layout_below="@id/passLayout"
+        android:layout_centerHorizontal="true"
+        android:background="#FFFFFF"/>
+
+    <!-- Forgot Password -->
+    <TextView
+        android:id="@+id/tvForgot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot your password?"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:layout_below="@id/passLayout"
+        android:layout_marginTop="14dp"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- LOGIN BUTTON -->
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="300dp"
+        android:layout_height="52dp"
+        android:layout_below="@id/tvForgot"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:text="LOGIN"
+        android:textColor="#0B2A4E"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:background="@drawable/white_button"/>
+
+    <!-- REGISTER -->
+    <TextView
+        android:id="@+id/tvRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REGISTER"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"/>
+</RelativeLayout>
